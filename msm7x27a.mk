@@ -143,7 +143,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     rild.libargs=-d/dev/smd0 \
-    ro.telephony.call_ring.delay=0 \
+    ro.telephony.call_ring.delay=100 \
     ro.telephony.call_ring.multiple=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -153,6 +153,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=60
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.gapless.playback.disable=true \
+    ro.sys.fw.bg_apps_limit=16 \
+    ro.config.max_starting_bg=8
 
 # Stagefright
 PRODUCT_PROPERTY_OVERRIDES += \
