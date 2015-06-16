@@ -40,7 +40,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
+# Low RAM settings
 TARGET_ARCH_LOWMEM := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 
 # Qualcomm hardware
 BOARD_USES_QCOM_HARDWARE := true

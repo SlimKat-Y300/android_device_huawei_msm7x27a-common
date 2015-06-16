@@ -130,9 +130,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=200
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=48m \
-    dalvik.vm.heapsize=128m \
-    ro.config.low_ram=true
+    dalvik.vm.heapgrowthlimit=52m \
+    dalvik.vm.heapsize=128m
 
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
@@ -154,10 +153,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=60
 
+# Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.gapless.playback.disable=true \
-    ro.sys.fw.bg_apps_limit=16 \
-    ro.config.max_starting_bg=8
+    audio.gapless.playback.disable=true
+
+# Low RAM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.low_ram=true \
+    dalvik.vm.jit.codecachesize=0 \
+    persist.sys.force_highendgfx=true \
+    ro.config.max_starting_bg=8 \
+    ro.sys.fw.bg_apps_limit=16
 
 # Stagefright
 PRODUCT_PROPERTY_OVERRIDES += \
